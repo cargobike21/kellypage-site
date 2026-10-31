@@ -1,5 +1,11 @@
 /* kellypage.app -- the Kelly Page neon look (kelly-page/css/kelly.css colours), as a plain reading site. */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+/* Fonts served from this site (SIL Open Font Licence, assets/fonts/OFL-*.txt) -- no Google Fonts request, so no third
+   party sees who visits. Latin subsets; Orbitron is one variable file for both weights. */
+@font-face { font-family: 'Orbitron'; font-style: normal; font-weight: 400 900; font-display: swap; src: url(../assets/fonts/orbitron.woff2) format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 500; font-display: swap; src: url(../assets/fonts/rajdhani-500.woff2) format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 600; font-display: swap; src: url(../assets/fonts/rajdhani-600.woff2) format('woff2'); }
+@font-face { font-family: 'Rajdhani'; font-style: normal; font-weight: 700; font-display: swap; src: url(../assets/fonts/rajdhani-700.woff2) format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url(../assets/fonts/jetbrains-mono-500.woff2) format('woff2'); }
 :root {
   --bg: #050912; --bg2: #0a1124; --panel: #0d152a; --raised: #131e3a; --line: #1f2d4f; --line2: #2c3e68;
   --text: #e8f1ff; --dim: #a3b2d2; --mute: #6f80a3;
