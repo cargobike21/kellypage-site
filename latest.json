@@ -9,9 +9,9 @@
     "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.38.html"
   },
   "pi": {
-    "version": "0.4.38 (uploading soon)",
-    "size": "about 280 MB",
-    "sha256": "(coming with the image)",
+    "version": "0.4.38",
+    "size": "280 MB",
+    "sha256": "594ad5a5ef54a91eb7b5fe1b49d701f762a43fcd8dbc1d8240f2cd3f70bf69b3",
     "image": "https://downloads.kellypage.app/kellypage-0.4.38-arm64-lite.img.xz",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
   }
