@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Kelly Page</title>
+<meta name="description" content="About Kelly Page: free software for hams, MIT licence, credits and the open-source parts it's built on.">
+<link rel="icon" href="assets/kelly-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="assets/kelly-mark.svg" alt="">KELLY PAGE</a>
+  <nav class="nav">
+    <a href="./">Home</a><a href="download.html">Download</a><a href="raspberry-pi.html">Raspberry Pi</a>
+    <a href="mesh-buddy.html">Mesh Buddy</a><a href="guides.html">Guides</a><a href="tips.html">Tips</a><a href="about.html" aria-current="page">About</a>
+  </nav>
+</div></header>
+
+<main class="narrow">
+  <h1>🐶 About Kelly Page</h1>
+  <p class="lede">Kelly Page started as a console for one Tait radio on the P25X network in Queensland, and grew into a
+  toolbox for hams: LoRa mesh, APRS, Bluetooth, SCADA trainers and a GPS tracker you build yourself.</p>
+
+  <h2>Free software for hams</h2>
+  <p>Kelly Page is free, and released under the <b>MIT licence</b>: use it, change it, share it. It's made for licensed
+  amateur radio operators, and anything it sends to the APRS network goes under your own callsign.</p>
+
+  <h2>The P25X network</h2>
+  <p>P25X links Tait P25 repeaters across Queensland over the internet. Kelly's radio pages (texts, bulletins, the PBBS,
+  SSTV, cameras, weather and updates over the air) talk to the P25X gateway. Everything else (LoRa mesh, the APRS iGate,
+  Mesh Buddy, BLE Presence, the demos) works for any ham.</p>
+
+  <h2>Built on</h2>
+  <div class="wrap"><table>
+    <tr><th>Part</th><th>Used for</th><th>Licence</th></tr>
+    <tr><td><a href="https://github.com/meshcore-dev/MeshCore">MeshCore</a> by Scott Powell</td><td>Mesh Buddy firmware (MeshCore companion 1.18.0 + a MeshPRS tracker)</td><td>MIT</td></tr>
+    <tr><td><a href="https://leafletjs.com/">Leaflet</a></td><td>Maps</td><td>BSD-2-Clause</td></tr>
+    <tr><td><a href="https://github.com/hessu/aprs-symbols">aprs.fi symbol set</a> by Heikki Hannikainen OH7LZB</td><td>APRS symbols on the MeshPRS map</td><td>Free for APRS applications</td></tr>
+    <tr><td><a href="https://github.com/shashwatak/satellite-js">satellite.js</a></td><td>ISS tracker</td><td>MIT</td></tr>
+    <tr><td><a href="https://github.com/kazuhikoarase/qrcode-generator">qrcode-generator</a></td><td>QR codes</td><td>MIT</td></tr>
+    <tr><td><a href="https://github.com/cozmo/jsQR">jsQR</a></td><td>Reading QR codes</td><td>Apache-2.0</td></tr>
+    <tr><td><a href="https://tweetnacl.js.org/">TweetNaCl.js</a></td><td>Signatures</td><td>Public domain</td></tr>
+    <tr><td><a href="https://github.com/adafruit/Adafruit_nRF52_nrfutil">adafruit-nrfutil</a></td><td>The USB flasher follows its serial DFU protocol</td><td>BSD</td></tr>
+  </table></div>
+  <p>Each licence ships next to its part inside the Kelly Page download.</p>
+
+  <h2>Names</h2>
+  <p>Tait, RAKwireless, WisBlock, MeshCore, Meshtastic, Raspberry Pi and Core Electronics names belong to their owners.
+  Kelly Page isn't from, or sponsored by, any of them.</p>
+
+  <h2>Privacy</h2>
+  <p>This site has no tracking, no cookies and no ads. Kelly Page keeps its settings in your own browser and talks only
+  to your radio, your LoRa node, your own bridge and (if you turn them on) the P25X gateway and APRS-IS.</p>
+
+  <h2>Get in touch</h2>
+  <p>Questions, ideas, bugs: Alec VK4AZ, <a href="mailto:hello@kellypage.app">hello@kellypage.app</a>.</p>
+</main>
+
+<footer><div class="in">
+  <div>Kelly Page is free software for hams, MIT licence. Made in Queensland by Alec VK4AZ.</div>
+  <div><a href="about.html">About, credits and licences</a> · <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS standard</a></div>
+</div></footer>
+</body>
+</html>

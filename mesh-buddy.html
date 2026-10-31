@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesh Buddy -- build your own GPS tracker</title>
+<meta name="description" content="Mesh Buddy: a build-it-yourself GPS tracker that puts you on aprs.fi over the MeshCore LoRa mesh. About $77 in parts, flashed from Kelly Page.">
+<link rel="icon" href="assets/kelly-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="assets/kelly-mark.svg" alt="">KELLY PAGE</a>
+  <nav class="nav">
+    <a href="./">Home</a><a href="download.html">Download</a><a href="raspberry-pi.html">Raspberry Pi</a>
+    <a href="mesh-buddy.html" aria-current="page">Mesh Buddy</a><a href="guides.html">Guides</a><a href="tips.html">Tips</a><a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<main class="narrow">
+  <h1>🚲 Mesh Buddy</h1>
+  <p class="lede">A little GPS tracker you build yourself. It sends your position over the MeshCore LoRa mesh, and a
+  Kelly iGate puts it on <b>aprs.fi</b> under your callsign. No SIM, no phone, no internet on the tracker.</p>
+  <div class="btns">
+    <a class="btn primary" href="guides/mesh-buddy-starter.html">📘 The step-by-step guide</a>
+    <a class="btn hot" href="app/index.html#mesh">⚡ Flash a Mesh Buddy now</a>
+  </div>
+
+  <h2>🛒 The parts (about $77)</h2>
+  <p>Everything in one order from <a href="https://core-electronics.com.au">Core Electronics</a>:</p>
+  <div class="wrap"><table>
+    <tr><th>Part</th><th>SKU</th><th>Price</th></tr>
+    <tr><td><a href="https://core-electronics.com.au/meshtastic-starter-kit-rak4631-wisblock-lora-antenna-offgrid-mesh-network-a.html">WisBlock Meshtastic Starter Kit 9xxMHz (RAK19003)</a><br><span style="color:var(--dim)">RAK4631 radio + brains, base board, LoRa antenna, USB-C cable</span></td><td>RW-115093</td><td>$39.30</td></tr>
+    <tr><td><a href="https://core-electronics.com.au/rak12500-wisblock-gps-location-module-ublox-zoe-m8q.html">RAK12500 GNSS GPS module</a></td><td>RW-110016</td><td>$32.05</td></tr>
+    <tr><td><a href="https://core-electronics.com.au/interface-cable-sma-to-u-fl.html">SMA to U.FL cable</a><br><span style="color:var(--dim)">joins the antenna to the radio</span></td><td>FIT0219</td><td>$5.46</td></tr>
+  </table></div>
+  <p>Plus a 3.7 V LiPo battery with a JST PH 2.0 plug (check the + and − before plugging in!) and a weatherproof case.
+  <span style="color:var(--mute)">Prices checked 31 October 2026, inc GST.</span></p>
+
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>Build it.</b> No soldering: two modules click onto the base board, two antennas, one battery.</li>
+    <li><b>Flash it from Kelly.</b> LoRa Mesh › 🚲 Mesh Buddy. Your callsign comes from Kelly, so it's set up as you.
+      About 70 seconds over USB, right here on this site (USB needs Chrome or Edge).</li>
+    <li><b>Add it to an iGate.</b> Your own Kelly at home, or a friendly local iGate operator's.</li>
+    <li><b>Ride!</b> It beacons as you move, every MeshCore repeater passes it on, and you're on the map. 🗺️</li>
+  </ol>
+
+  <h2>What it reports</h2>
+  <p>Besides your position, Mesh Buddy sends a health report that aprs.fi graphs: battery voltage, how well the
+  nearest repeater heard you (EchoSNR and Echo%), GPS satellites, temperature, and lights for charging, low battery,
+  fix, moving and more.</p>
+
+  <div class="note"><b>📡 MeshPRS inside.</b> Mesh Buddy speaks <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS</a>,
+  the open standard for APRS over MeshCore. Any MeshPRS iGate can gate it, not only Kelly.</div>
+  <div class="note warn"><b>📜 Hams only.</b> It sends your callsign. Its name always starts with your call, and
+  iGates only gate stations whose name carries a VK or ZL callsign.</div>
+</main>
+
+<footer><div class="in">
+  <div>Kelly Page is free software for hams, MIT licence. Made in Queensland by Alec VK4AZ.</div>
+  <div><a href="about.html">About, credits and licences</a> · <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS standard</a></div>
+</div></footer>
+</body>
+</html>

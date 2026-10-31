@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelly Page on a Pi</title>
+</head>
+<body style="margin:0;padding:0;background:#eef3fb;font-family:Segoe UI,Arial,Helvetica,sans-serif;color:#1d2433;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef3fb;">
+<tr><td align="center" style="padding:16px 8px;">
+<table role="presentation" width="640" cellpadding="0" cellspacing="0" style="max-width:640px;width:100%;background:#ffffff;border-radius:16px;overflow:hidden;">
+
+<!-- Header -->
+<tr><td style="background:#5b2bd6;background-image:linear-gradient(135deg,#5b2bd6 0%,#d6297a 55%,#ff9f1c 100%);padding:34px 28px 30px;text-align:center;color:#ffffff;">
+  <div style="font-size:46px;line-height:1;">🐶📻🍓</div>
+  <div style="font-size:30px;font-weight:800;margin-top:12px;line-height:1.2;">Kelly Page on a Raspberry&nbsp;Pi</div>
+  <div style="font-size:17px;margin-top:8px;opacity:.95;">Your easy step-by-step guide!</div>
+</td></tr>
+
+<!-- Intro -->
+<tr><td style="padding:24px 28px 8px;font-size:17px;line-height:1.6;">
+  <p style="margin:0 0 12px;">G'day!</p>
+  <p style="margin:0 0 12px;">This gets <b>Kelly Page</b> running on a little Raspberry Pi that sits next to your Tait radio. Once it's set up, you never touch the Pi again. You just open Kelly on your home PC like a website. 🎉</p>
+  <p style="margin:0;">Take it one step at a time. Each step is short. If anything looks different from what's written here, stop and give me a call. No harm done.</p>
+  <p style="margin:12px 0 0;">Cheers,<br><b>Alec VK4AZ</b></p>
+</td></tr>
+
+<!-- What you need -->
+<tr><td style="padding:20px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fff7e0;border:2px solid #ffc94d;border-radius:12px;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.7;">
+    <div style="font-size:20px;font-weight:800;color:#b36b00;margin-bottom:6px;">🛒 What you need</div>
+    ✅ A <b>Raspberry Pi</b> (a Pi 4 or Pi 5 is best) and its <b>power supply</b><br>
+    ✅ A <b>micro SD card</b>, 8 GB or bigger<br>
+    ✅ An <b>SD card reader</b> for your PC (if your PC doesn't have a slot)<br>
+    ✅ An <b>Ethernet cable</b> from the Pi to your internet router<br>
+    ✅ Your radio's <b>USB data lead</b> (the one that plugs into the radio's data port)<br>
+    ✅ Your home <b>PC</b> with <b>Google Chrome</b> or <b>Microsoft Edge</b>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 1 -->
+<tr><td style="padding:22px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #2b8cff;background:#eef6ff;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#1565d8;">1️⃣ &nbsp;Download the Kelly file</div>
+    <p style="margin:8px 0;">Click this link and save the file to your <b>Downloads</b> folder:</p>
+    <p style="margin:8px 0;text-align:center;"><a href="https://downloads.kellypage.app/kellypage-0.4.36-arm64-lite.img.xz" style="display:inline-block;background:#2b8cff;color:#ffffff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:30px;">⬇️ Download Kelly for the Pi</a></p>
+    <p style="margin:8px 0;">The file is called <b>kellypage-0.4.36-arm64-lite.img.xz</b>. It's big (about 280 MB), so give it a few minutes. <b>Don't open it.</b> Just leave it in Downloads.</p>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 2 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #9b4dff;background:#f5eeff;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#7a2fe0;">2️⃣ &nbsp;Put Kelly on the SD card</div>
+    <ol style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">Get <b>Raspberry Pi Imager</b> from <a href="https://www.raspberrypi.com/software/" style="color:#7a2fe0;">raspberrypi.com/software</a>, then install it and open it.</li>
+      <li style="margin-bottom:6px;">Put the SD card in your PC.</li>
+      <li style="margin-bottom:6px;"><b>Device:</b> pick your Pi model (for example Raspberry Pi 5).</li>
+      <li style="margin-bottom:6px;"><b>Operating System:</b> scroll right down to the bottom of the list and click <b>Use custom</b>. A window opens to choose a file:
+        <ul style="margin:6px 0 0;padding-left:20px;">
+          <li style="margin-bottom:4px;">On the left side of that window, click <b>📁 Downloads</b>.</li>
+          <li style="margin-bottom:4px;">Click once on the file <b>kellypage-0.4.36-arm64-lite.img.xz</b>. Windows might hide the ending and show just <b>kellypage-0.4.36-arm64-lite.img</b>. That's the same file.</li>
+          <li style="margin-bottom:4px;">Click <b>Open</b>.</li>
+          <li>Can't see the file? It may still be downloading, so wait for it to finish. Or type <b>kellypage</b> in the search box at the top right of the window.</li>
+        </ul>
+        Imager now shows <b>kellypage-0.4.36-arm64-lite</b> as the chosen operating system. ✅</li>
+      <li style="margin-bottom:6px;"><b>Storage:</b> pick your SD card. ⚠️ Double-check it's the SD card, because everything on it gets wiped.</li>
+      <li style="margin-bottom:6px;">Click <b>Next</b>. If it asks about <i>"OS customisation"</i> or <i>"settings"</i>, choose <b>No</b>. You're using a cable, so nothing needs setting.</li>
+      <li style="margin-bottom:6px;">Say <b>Yes</b> to the warning and wait for it to write and check the card (about 5 minutes ☕).</li>
+      <li>When it says it's finished, take the card out.</li>
+    </ol>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 3 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #18b663;background:#eafbf2;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#0e8a48;">3️⃣ &nbsp;Plug it all in</div>
+    <ol style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">Put the SD card in the Pi. It goes in underneath, label side facing down.</li>
+      <li style="margin-bottom:6px;">Plug the <b>Ethernet cable</b> from the Pi into your router.</li>
+      <li style="margin-bottom:6px;">Plug the radio's <b>USB data lead</b> into any USB socket on the Pi, and switch the radio on.</li>
+      <li style="margin-bottom:6px;">Plug in the Pi's <b>power</b> last.</li>
+      <li><b>Wait 3 minutes.</b> ⏳ On its very first start it sets itself up, and there's nothing to watch.</li>
+    </ol>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 4 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #ff7a1a;background:#fff2e8;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#d95a00;">4️⃣ &nbsp;Say hello to the Pi (one time only)</div>
+    <p style="margin:8px 0;">On your PC, click the <b>Start</b> button, type <b>PowerShell</b> and open it. A blue or black window appears. Type this exactly, then press <b>Enter</b>:</p>
+    <p style="margin:10px 0;background:#1d2433;color:#7dffb3;font-family:Consolas,Courier New,monospace;font-size:18px;padding:12px 16px;border-radius:8px;">ssh kelly@kellypage.local</p>
+    <ul style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">If it asks <i>"Are you sure you want to continue connecting?"</i>, type <b>yes</b> and press Enter.</li>
+      <li style="margin-bottom:6px;">At <i>password</i>, type <b>kellypage</b> and press Enter. 👀 <b>Nothing shows on screen while you type a password.</b> That's normal, just keep typing.</li>
+      <li style="margin-bottom:6px;">The Pi now asks you to make up <b>your own password</b>. First type <b>kellypage</b> again (the old one), then your new password <b>twice</b>. ✍️ <b>Write it down!</b></li>
+      <li>It then closes the connection. That's normal too. Type the same <b>ssh</b> line again and log in with your <b>new</b> password.</li>
+    </ul>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 5 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #e0297a;background:#ffeef6;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#c01866;">5️⃣ &nbsp;Answer three quick questions</div>
+    <p style="margin:8px 0;">The Pi asks for your password once more (your new one), then:</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-size:16px;margin:6px 0;">
+      <tr><td style="padding:6px 8px;background:#ffffff;border-radius:6px;">📛 <b>Your callsign</b> → type it (for example <b>VK4ABC</b>) and press Enter</td></tr>
+      <tr><td style="height:6px;"></td></tr>
+      <tr><td style="padding:6px 8px;background:#ffffff;border-radius:6px;">📡 <b>LoRa mesh node</b> → just press <b>Enter</b></td></tr>
+      <tr><td style="height:6px;"></td></tr>
+      <tr><td style="padding:6px 8px;background:#ffffff;border-radius:6px;">🔵 <b>Scan Bluetooth?</b> → type <b>n</b> and press Enter</td></tr>
+    </table>
+    <p style="margin:10px 0 6px;">It finishes with <b>"Kelly Page is running."</b> 🎉 Below that is your <b>own Kelly address</b>, something like:</p>
+    <p style="margin:6px 0;background:#1d2433;color:#ffd166;font-family:Consolas,Courier New,monospace;font-size:14px;padding:10px 14px;border-radius:8px;word-break:break-all;">http://kellypage.local:8025/?connect=ip&amp;token=abcd2345ef</p>
+    <p style="margin:6px 0 0;">Highlight that whole line with your mouse, then <b>right-click</b> to copy it. The jumble of letters at the end is <b>your private key</b>, which stops anyone else on your network using your radio. Keep it to yourself. 🔒</p>
+    <p style="margin:8px 0 0;">You can close the PowerShell window now. <b>You're done with the Pi!</b></p>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 6 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #00a7b5;background:#e6fafb;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#00808b;">6️⃣ &nbsp;Open Kelly and bookmark it ⭐</div>
+    <ol style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">Open <b>Chrome</b> or <b>Edge</b>, click in the address bar at the top, paste the address (<b>Ctrl+V</b>) and press Enter.</li>
+      <li style="margin-bottom:6px;">Press <b>Ctrl+D</b> to bookmark it, so from now on Kelly is <b>one click away</b>.</li>
+      <li>Kelly asks how you use your radio. Pick <b>🎙️ Shack</b> (you still talk on the radio's own microphone, and Kelly is your big screen).</li>
+    </ol>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 7 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #2b8cff;background:#eef6ff;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#1565d8;">7️⃣ &nbsp;Check your radio is talking to Kelly 📻</div>
+    <p style="margin:8px 0;">Kelly connects to your radio by itself. A blue <i>"Waking up the radio dog…"</i> bar 🐕 counts for about 10 seconds. Then Kelly shows your radio's <b>model and serial number</b>, and the P25X gateway answers with your <b>radio ID</b>.</p>
+    <p style="margin:8px 0;">That's it, your radio's connected! ✅</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px dashed #2b8cff;border-radius:10px;margin-top:6px;">
+    <tr><td style="padding:12px 14px;font-size:15px;line-height:1.6;">
+      <b>🔧 If the radio doesn't wake up</b><br>
+      Your radio needs the <b>P25X code plug</b> in it for Kelly to talk to it. If I've already programmed your radio, you're fine. If not, give me a ring and I'll sort it. For whoever programs it, the settings are in the Kelly manual under <i>"Setting up the radio"</i>:<br>
+      <span style="font-size:14px;color:#44506a;">CCDI on · 19200 baud, no flow control · power up in Transparent Mode · Output Progress Messages on · Ignore Escape Sequence off · P25 data <b>Unconfirmed</b>, SAP 00, destination <b>5059999</b>, lead-in 30 · GPS radios: location format <b>Tait SDM</b>.</span><br>
+      Also try unplugging the radio's USB lead from the Pi and plugging it back in. Kelly notices on its own.
+    </td></tr></table>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 8 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #9b4dff;background:#f5eeff;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#7a2fe0;">8️⃣ &nbsp;Your callsign and radio ID 📛</div>
+    <ol style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">In Kelly's menu, open <b>Admin</b> and find <b>My station</b>.</li>
+      <li style="margin-bottom:6px;"><b>Callsign:</b> type your callsign, for example <b>VK4ABC</b>.</li>
+      <li style="margin-bottom:6px;"><b>Radio ID:</b> put in your radio's 7-digit ID (the number the gateway answered with in step 7). Not sure? Ask me.</li>
+      <li><b>Group relay ID:</b> leave it as <b>5059999</b>. Don't change it.</li>
+    </ol>
+    <p style="margin:8px 0 0;">Kelly saves it straight away. 👍</p>
+  </td></tr></table>
+</td></tr>
+
+<!-- STEP 9 -->
+<tr><td style="padding:16px 28px 4px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-radius:12px;border-left:8px solid #18b663;background:#eafbf2;">
+  <tr><td style="padding:16px 18px;font-size:16px;line-height:1.65;">
+    <div style="font-size:21px;font-weight:800;color:#0e8a48;">9️⃣ &nbsp;Put yourself on the map 🗺️</div>
+    <p style="margin:8px 0;">Your shack radio doesn't have GPS, so we give Kelly your station's position once. It then shows you on <b>aprs.fi</b> and the P25X network map.</p>
+    <ol style="margin:8px 0 0;padding-left:22px;">
+      <li style="margin-bottom:6px;">Open the <b>GPS</b> page and find <b>Fixed position · APRS</b>.</li>
+      <li style="margin-bottom:6px;">Press <b>Pick on map</b>, zoom in to your place and click on it. 📍 (Or type your latitude and longitude, if you know them.)</li>
+      <li style="margin-bottom:6px;"><b>Callsign:</b> type your callsign with <b>-15</b> on the end, for example <b>VK4ABC-15</b>. The "-15" just marks it as your Kelly station.</li>
+      <li style="margin-bottom:6px;">🏠 Rather not show your exact house? Choose a <b>lower precision</b> and you'll show up as "near" your place instead.</li>
+      <li style="margin-bottom:6px;">Press <b>Beacon now</b>. 🚀</li>
+      <li>Tick the <b>timer</b> box so it repeats on its own.</li>
+    </ol>
+    <p style="margin:8px 0 0;">Give it a minute, then look yourself up on <a href="https://aprs.fi/" style="color:#0e8a48;font-weight:700;">aprs.fi</a> (search for your callsign-15, for example VK4ABC-15). There you are! 🥳</p>
+  </td></tr></table>
+</td></tr>
+
+<!-- Done -->
+<tr><td style="padding:22px 28px 6px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#5b2bd6;background-image:linear-gradient(135deg,#ff9f1c 0%,#d6297a 50%,#5b2bd6 100%);border-radius:12px;">
+  <tr><td style="padding:20px;text-align:center;color:#ffffff;font-size:17px;line-height:1.5;">
+    <div style="font-size:34px;">🎉🐶🎉</div>
+    <b style="font-size:22px;">All done, you're on P25X with Kelly!</b><br>
+    From now on, just switch on the Pi and radio, then click your Kelly bookmark.
+  </td></tr></table>
+</td></tr>
+
+<!-- Help -->
+<tr><td style="padding:18px 28px 6px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f5f9;border-radius:12px;">
+  <tr><td style="padding:16px 18px;font-size:15px;line-height:1.65;">
+    <div style="font-size:19px;font-weight:800;margin-bottom:6px;">🆘 If something goes wrong</div>
+    <b>"kellypage.local" can't be found:</b> your router's web page lists the devices on your network. Find the one called <b>kellypage</b> and use its number instead (something like <b>192.168.1.23</b>). For example: <span style="font-family:Consolas,Courier New,monospace;">ssh kelly@192.168.1.23</span><br><br>
+    <b>Kelly's page won't open:</b> check the Pi's lights are on and the Ethernet cable is in. Pull the Pi's power out, wait 10 seconds, plug it back in, then wait 2 minutes.<br><br>
+    <b>Forgot your Pi password:</b> no drama. Just do steps 2 to 5 again with the same file.<br><br>
+    <b>Anything else:</b> give me a ring. 📞
+  </td></tr></table>
+</td></tr>
+
+<tr><td style="padding:14px 28px 26px;font-size:14px;color:#6b7590;text-align:center;line-height:1.5;">
+  📅 This Kelly version works until <b>28 November 2026</b>. A newer version comes out before then, so watch for the PBBS notice.<br>
+  Kelly Page is free software for hams. 73 de Alec VK4AZ
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>

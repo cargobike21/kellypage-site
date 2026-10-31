@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Kelly Page</title>
+<meta name="description" content="Download the latest Kelly Page release: free software for hams.">
+<link rel="icon" href="assets/kelly-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/latest.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="assets/kelly-mark.svg" alt="">KELLY PAGE</a>
+  <nav class="nav">
+    <a href="./">Home</a><a href="download.html" aria-current="page">Download</a><a href="raspberry-pi.html">Raspberry Pi</a>
+    <a href="mesh-buddy.html">Mesh Buddy</a><a href="guides.html">Guides</a><a href="tips.html">Tips</a><a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<main class="narrow">
+  <h1>⬇️ Download Kelly Page</h1>
+  <p class="lede">One zip file. Unzip it, open it in Chrome or Edge, and you're running.</p>
+
+  <div class="dl">
+    <div class="ver">Kelly Page <span data-latest="version">…</span></div>
+    <div class="meta">Released <span data-latest="date">…</span> · works until <b data-latest="expires">…</b> · <span data-latest="size">…</span></div>
+    <div class="btns">
+      <a class="btn primary" data-latest-href="files.zip" href="#">⬇️ Download the zip</a>
+      <a class="btn" data-latest-href="files.manual" href="#">📖 The manual</a>
+    </div>
+    <div class="sha">SHA-256: <span data-latest="sha256">…</span></div>
+  </div>
+
+  <div class="note warn"><b>📅 Why "works until"?</b> Each release has a stop date, about six months out. It keeps
+  everyone on a recent version: the radio protocols and the P25X gateway move on, and an old copy can confuse them.
+  Grab the new one before the date. Your settings carry over (Admin › Save config, then Load config).</div>
+
+  <h2>On a PC</h2>
+  <ol class="steps">
+    <li><b>Unzip</b> it somewhere you'll find it again, for example <code>Documents\Kelly Page</code>.</li>
+    <li><b>Open <code>index.html</code></b> in Chrome or Edge. (Firefox and Safari can't talk to USB devices.)</li>
+    <li><b>Plug in your gear</b> by USB: a Tait radio's programming / data lead, or a MeshCore / Meshtastic node.
+      Kelly's Admin page connects to it.</li>
+    <li><b>Bookmark it.</b> That's it. 🎉</li>
+  </ol>
+  <p>Want to use the radio from another computer, or keep Kelly running with the PC off? Kelly comes with a small
+  bridge program (<code>start-kelly.bat</code>, Python 3) for IP, and the <a href="raspberry-pi.html">Raspberry Pi
+  image</a> does all of it for you.</p>
+
+  <h2>Updating</h2>
+  <ol>
+    <li>In your old Kelly: <b>Admin › Save config</b>.</li>
+    <li>Unzip the new version over the old folder.</li>
+    <li>Open Kelly and press <b>Ctrl+F5</b> once.</li>
+    <li>Anything missing? <b>Admin › Load config</b>.</li>
+  </ol>
+  <p>On the P25X network, Kelly can also fetch new releases itself over P25 data, overnight.</p>
+
+  <h2>Checking the download</h2>
+  <p>The SHA-256 above should match the file you downloaded. In PowerShell:</p>
+  <pre>Get-FileHash .\KellyPage-*.zip</pre>
+</main>
+
+<footer><div class="in">
+  <div>Kelly Page is free software for hams, MIT licence. Made in Queensland by Alec VK4AZ.</div>
+  <div><a href="about.html">About, credits and licences</a> · <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS standard</a></div>
+</div></footer>
+</body>
+</html>

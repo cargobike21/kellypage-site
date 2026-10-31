@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelly Page on a Raspberry Pi</title>
+<meta name="description" content="A ready-made Raspberry Pi image with Kelly Page installed: flash it, plug in your radio, and Kelly runs 24/7.">
+<link rel="icon" href="assets/kelly-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/latest.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="assets/kelly-mark.svg" alt="">KELLY PAGE</a>
+  <nav class="nav">
+    <a href="./">Home</a><a href="download.html">Download</a><a href="raspberry-pi.html" aria-current="page">Raspberry Pi</a>
+    <a href="mesh-buddy.html">Mesh Buddy</a><a href="guides.html">Guides</a><a href="tips.html">Tips</a><a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<main class="narrow">
+  <h1>🍓 Kelly Page on a Raspberry Pi</h1>
+  <p class="lede">A little Pi sits next to your radio and runs Kelly all day and night. You never touch it again: just
+  open Kelly from any computer or phone in the house.</p>
+
+  <div class="dl">
+    <div class="ver">Pi image <span data-latest="pi.version">…</span></div>
+    <div class="meta">Raspberry Pi OS Lite 64-bit with Kelly installed · <span data-latest="pi.size">…</span> ·
+      Pi 5, 4, 400, 3B / 3B+, Zero 2 W</div>
+    <div class="btns">
+      <a class="btn primary" data-latest-href="pi.image" href="#">⬇️ Download the image</a>
+    </div>
+    <div class="sha">SHA-256: <span data-latest="pi.sha256">…</span></div>
+  </div>
+
+  <h2>🛒 What you need</h2>
+  <ul>
+    <li>A <b>Raspberry Pi</b> (a 4 or 5 is best) and its <b>power supply</b></li>
+    <li>A <b>micro SD card</b>, 8 GB or bigger, and a card reader for your PC</li>
+    <li>An <b>Ethernet cable</b> to your router (or your Wi-Fi details)</li>
+    <li>Your radio's <b>USB data lead</b>, and / or a MeshCore or Meshtastic LoRa node</li>
+  </ul>
+
+  <h2>1️⃣ Put Kelly on the SD card</h2>
+  <ol class="steps">
+    <li>Get <b>Raspberry Pi Imager</b> from <a href="https://www.raspberrypi.com/software/">raspberrypi.com/software</a> and open it.</li>
+    <li><b>The easy way:</b> Imager › <i>App Options</i> (bottom left) › <i>Content repository</i> › <i>Use custom URL</i>, and paste:
+      <pre data-latest="pi.imager">https://downloads.kellypage.app/kellypage-os-list.json</pre>
+      Now <i>Choose OS</i> shows <b>Kelly Page</b> right at the top. 🎉<br>
+      <span style="color:var(--dim)">(Or download the image above and use <i>Choose OS › Use custom</i>.)</span></li>
+    <li><b>Storage:</b> pick your SD card. ⚠️ Double-check it's the card: everything on it gets wiped.</li>
+    <li><b>Wi-Fi instead of a cable?</b> When Imager asks about <i>OS customisation</i>, choose <i>Edit settings</i>,
+      tick <i>Configure wireless LAN</i>, and enter your network, password and country <b>AU</b>. Using a cable? Choose <b>No</b>.</li>
+    <li>Let it write and check the card (about 5 minutes ☕).</li>
+  </ol>
+
+  <h2>2️⃣ Plug it all in</h2>
+  <ol class="steps">
+    <li>SD card into the Pi, Ethernet to the router, the radio's USB lead into any USB socket.</li>
+    <li>Power in last, then <b>wait 3 minutes</b>. On its first start it sets itself up.</li>
+  </ol>
+
+  <h2>3️⃣ Say hello (once)</h2>
+  <p>On your PC, open <b>PowerShell</b> (or Terminal on a Mac) and type:</p>
+  <pre>ssh kelly@kellypage.local</pre>
+  <ul>
+    <li>Password <b>kellypage</b>. 👀 Nothing shows while you type a password; that's normal.</li>
+    <li>You're made to pick your <b>own password</b> straight away: the old one once, the new one twice. ✍️ Write it down.
+      It logs you out; log back in with the new one.</li>
+    <li>Three quick questions: your <b>callsign</b>, your <b>LoRa node</b> (Enter = none / found by itself), and
+      <b>Bluetooth</b> scanning (y / n).</li>
+  </ul>
+  <p>It finishes with <b>"Kelly Page is running."</b> and your own Kelly address, like:</p>
+  <pre>http://kellypage.local:8025/?connect=ip&amp;token=abcd2345ef</pre>
+  <p>That jumble on the end is <b>your private key</b>. It stops anyone else on your network using your radio. 🔒
+  Copy the whole line.</p>
+
+  <h2>4️⃣ Open Kelly and bookmark it ⭐</h2>
+  <p>Paste the address into Chrome or Edge and press <b>Ctrl+D</b>. On your phone, run <code>kellypage-qr</code> on the
+  Pi to get the same address as a QR code.</p>
+
+  <div class="note"><b>🔧 Radio doesn't wake up?</b> Kelly needs CCDI turned on in the radio's code plug (19200 baud,
+  no flow control, Transparent Mode at power up). On the P25X network, the club's code plug already has it. Unplug and
+  re-plug the USB lead and Kelly notices on its own.</div>
+
+  <h2>Keeping it up to date</h2>
+  <p>Copy the new release zip over and run one command; if the new version doesn't start, the old one comes back by
+  itself:</p>
+  <pre>scp KellyPage-*.zip kelly@kellypage.local:
+ssh kelly@kellypage.local
+sudo kellypage-update KellyPage-*.zip</pre>
+
+  <h2>🆘 If something goes wrong</h2>
+  <table>
+    <tr><td><b>"kellypage.local" not found</b></td><td>Your router's device list shows the Pi's number (like 192.168.1.23). Use that instead.</td></tr>
+    <tr><td><b>Page won't load</b></td><td>Pull the power, wait 10 s, plug back in, wait 2 minutes.</td></tr>
+    <tr><td><b>Forgot the password</b></td><td>No drama: flash the card again. Setup takes two minutes.</td></tr>
+  </table>
+</main>
+
+<footer><div class="in">
+  <div>Kelly Page is free software for hams, MIT licence. Made in Queensland by Alec VK4AZ.</div>
+  <div><a href="about.html">About, credits and licences</a> · <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS standard</a></div>
+</div></footer>
+</body>
+</html>

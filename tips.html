@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelly Page tips</title>
+<meta name="description" content="Handy tips for getting the most out of Kelly Page, LoRa mesh, the APRS iGate and Mesh Buddy.">
+<link rel="icon" href="assets/kelly-favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="top"><div class="in">
+  <a class="brand" href="./"><img src="assets/kelly-mark.svg" alt="">KELLY PAGE</a>
+  <nav class="nav">
+    <a href="./">Home</a><a href="download.html">Download</a><a href="raspberry-pi.html">Raspberry Pi</a>
+    <a href="mesh-buddy.html">Mesh Buddy</a><a href="guides.html">Guides</a><a href="tips.html" aria-current="page">Tips</a><a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<main class="narrow">
+  <h1>💡 Tips</h1>
+  <p class="lede">Little things that make a big difference. Learned the hard way, so you don't have to.</p>
+
+  <h2>Kelly in general</h2>
+  <h3>💾 Save your set-up before every update</h3>
+  <p><b>Admin › Save config</b> keeps your callsign, contacts and settings in one file. After updating, press
+  <b>Ctrl+F5</b> once; if anything's missing, <b>Admin › Load config</b>.</p>
+  <h3>🎮 Not sure what a button does? Try it in the demo</h3>
+  <p>Add <code>?demo</code> to Kelly's address (or use <a href="app/index.html?demo">Try the demo</a>). Everything is
+  pretend, so you can press anything.</p>
+  <h3>🔒 Keep your Kelly address to yourself</h3>
+  <p>The <code>token=</code> on the end of your Pi's address is what stops anyone else on your network keying your
+  radio. Bookmark it; don't post it.</p>
+  <h3>📱 Kelly on your phone</h3>
+  <p>On the Pi, <code>kellypage-qr</code> shows your Kelly address as a QR code. Scan it with the phone's camera.</p>
+  <h3>🏠 Hide your exact house on the map</h3>
+  <p>When you set Kelly's fixed position, pick a <b>lower precision</b> (about 1 km) and you'll show as "near" your
+  place on aprs.fi instead of on your roof.</p>
+
+  <h2>LoRa mesh</h2>
+  <h3>📛 Put your callsign in your node's name</h3>
+  <p>For example <code>VK4ABC Home</code>. iGates only gate nodes whose name carries a VK or ZL callsign as the first or
+  second word, and other hams can see who you are.</p>
+  <h3>🤝 MeshCore needs both sides</h3>
+  <p>Messages, pings and traces only work when <b>both</b> nodes have each other as contacts. Kelly's 📇 Ham Contacts
+  tab swaps cards for you.</p>
+  <h3>🌊 Go easy on floods</h3>
+  <p>Flood adverts fill the whole shared mesh. Keep them rare and use zero-hop adverts for "I'm here". In SEQ, follow
+  the <a href="https://wiki.mbug.com.au/">MBUG</a> settings (923.125 MHz, 62.5 kHz, SF8, CR5, 2-byte path hashes);
+  Kelly warns if your hash size is wrong.</p>
+  <h3>🔭 Trace before you blame the repeater</h3>
+  <p>A message that "never arrives" is often a stale route. 🔭 Trace Route shows each hop and its signal, and Kelly
+  tries again by flood when a stored route stops answering.</p>
+
+  <h2>APRS iGate and Mesh Buddy</h2>
+  <h3>🧪 Dry run first</h3>
+  <p>Leave the iGate on <b>Dry run</b> and watch the log: it shows exactly what would go to aprs.fi. Go LIVE when it
+  looks right.</p>
+  <h3>📍 Add a tracker the easy way</h3>
+  <p>Switch it on next to your home node and it pops up in <b>🔎 Add my device</b>. Press <i>This is mine</i>.</p>
+  <h3>📶 The antenna is everything</h3>
+  <p>Mount the tracker's LoRa antenna upright and as high as you can, away from your body. On the first test ride,
+  nearly every lost packet was lost on the very first hop.</p>
+  <h3>🎯 Watch Echo% on a regular route</h3>
+  <p>Mesh Buddy's Echo% graph on aprs.fi shows how often the nearest repeater heard you. Low spots on your route are
+  where a better antenna or a new repeater would help most.</p>
+  <h3>🛑 Never transmit without an antenna</h3>
+  <p>Connect the LoRa antenna before the battery, every time. Transmitting into nothing can damage the radio.</p>
+</main>
+
+<footer><div class="in">
+  <div>Kelly Page is free software for hams, MIT licence. Made in Queensland by Alec VK4AZ.</div>
+  <div><a href="about.html">About, credits and licences</a> · <a href="https://cargobike21.github.io/MeshPRS/">MeshPRS standard</a></div>
+</div></footer>
+</body>
+</html>

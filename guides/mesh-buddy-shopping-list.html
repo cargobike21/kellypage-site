@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mesh Buddy Shopping List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* A field-day parts sheet: printed-look tables, WisBlock-blue accent, one column, summary first. */
+  --bg: #f5f7f8;
+  --paper: #ffffff;
+  --ink: #18222b;
+  --muted: #5a6872;
+  --rule: #d5dde2;
+  --accent: #0a6fb3;
+  --accent-soft: #e3f0f9;
+  --good: #1d7a43; --good-bg: #e2f3e8;
+  --warn: #8a5a00; --warn-bg: #fbf0d6;
+  --bad: #a3312b; --bad-bg: #f8e3e1;
+  --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11171c; --paper: #182128; --ink: #e4eaee; --muted: #9aa8b2; --rule: #2c3a44;
+    --accent: #5fb2ec; --accent-soft: #1b3346;
+    --good: #6fd197; --good-bg: #183324; --warn: #f0c46a; --warn-bg: #3a2e14; --bad: #f08a82; --bad-bg: #3c1f1d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11171c; --paper: #182128; --ink: #e4eaee; --muted: #9aa8b2; --rule: #2c3a44;
+  --accent: #5fb2ec; --accent-soft: #1b3346;
+  --good: #6fd197; --good-bg: #183324; --warn: #f0c46a; --warn-bg: #3a2e14; --bad: #f08a82; --bad-bg: #3c1f1d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--body); }
+main { max-width: 980px; margin: 0 auto; padding: 32px 20px 64px; display: grid; gap: 28px; }
+header { display: grid; gap: 6px; border-bottom: 3px solid var(--accent); padding-bottom: 18px; }
+.eyebrow { font: 600 14px/1 var(--mono); color: var(--accent); letter-spacing: .04em; }
+h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.1; text-wrap: balance; margin: 0; }
+h1 { font-size: 46px; }
+h2 { font-size: 30px; }
+h3 { font-size: 22px; }
+p { margin: 0; max-width: 68ch; }
+.lede { font-size: 19px; color: var(--muted); }
+section { display: grid; gap: 14px; }
+.card { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; padding: 20px 22px; display: grid; gap: 12px; }
+.pick { border-left: 6px solid var(--good); }
+.tag { display: inline-block; font: 600 13px/1 var(--body); padding: 5px 9px; border-radius: 99px; white-space: nowrap; }
+.t-good { background: var(--good-bg); color: var(--good); }
+.t-warn { background: var(--warn-bg); color: var(--warn); }
+.t-bad { background: var(--bad-bg); color: var(--bad); }
+.total { font: 700 40px/1 var(--display); font-variant-numeric: tabular-nums; }
+.total small { font: 400 15px var(--body); color: var(--muted); }
+.wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: var(--paper); }
+table { border-collapse: collapse; width: 100%; font-size: 15.5px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 13px/1.2 var(--body); text-transform: uppercase; letter-spacing: .05em; color: var(--muted); background: var(--accent-soft); }
+tr:last-child td { border-bottom: 0; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.sum td { font-weight: 700; background: var(--accent-soft); }
+.sku { font: 500 13px var(--mono); color: var(--muted); white-space: nowrap; }
+ol, ul { margin: 0; padding-left: 22px; display: grid; gap: 6px; max-width: 72ch; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.note { background: var(--warn-bg); color: var(--ink); border-radius: 8px; padding: 14px 16px; display: grid; gap: 6px; }
+.note strong { color: var(--warn); }
+footer { color: var(--muted); font-size: 14px; display: grid; gap: 6px; border-top: 1px solid var(--rule); padding-top: 16px; }
+@media (max-width: 480px) { h1 { font-size: 36px; } .total { font-size: 34px; } }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="eyebrow">VK4AZ · MESH BUDDY · PARTS · PRICES CHECKED 31 OCT 2026</div>
+  <h1>Mesh Buddy Shopping List</h1>
+  <p class="lede">What to buy to build a Mesh Buddy: a WisBlock GPS tracker, powered and charged over USB-C, that sends
+  your position over the SEQ MeshCore mesh to aprs.fi. Everything comes from Core Electronics in one order. Prices
+  include GST.</p>
+</header>
+
+<section>
+  <h2>The parts</h2>
+  <div class="card pick">
+    <div><span class="tag t-good">One Core Electronics order</span></div>
+    <div class="total">$76.81 <small>inc GST, plus a battery</small></div>
+    <p>A RAK4631 starter kit on the small RAK19003 base board, the RAK12500 GPS, and the cable that joins the kit's
+    antenna to the radio. It charges and powers from USB-C, takes a LiPo battery, and has a solar socket.</p>
+  </div>
+  <div class="wrap"><table>
+    <thead><tr><th>Part</th><th>Core SKU</th><th>What it does</th><th class="n">Price</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://core-electronics.com.au/meshtastic-starter-kit-rak4631-wisblock-lora-antenna-offgrid-mesh-network-a.html">WisBlock Meshtastic Starter Kit 9xxMHz (RAK19003 Base Board)</a></td><td class="sku">RW-115093</td><td>The RAK4631 radio and processor (nRF52840 + SX1262), the RAK19003 base board (USB-C, battery, solar, 2 module slots), a 2 dBi SMA antenna and a USB-C cable.</td><td class="n">$39.30</td></tr>
+      <tr><td><a href="https://core-electronics.com.au/rak12500-wisblock-gps-location-module-ublox-zoe-m8q.html">WisBlock GNSS GPS Location Module u-blox ZOE-M8Q RAK12500</a></td><td class="sku">RW-110016</td><td>The GPS: GPS, GLONASS, BeiDou, QZSS. GPS antenna included.</td><td class="n">$32.05</td></tr>
+      <tr><td><a href="https://core-electronics.com.au/interface-cable-sma-to-u-fl.html">Interface Cable SMA to U.FL (DFRobot)</a></td><td class="sku">FIT0219</td><td>Joins the kit's SMA antenna to the RAK4631's tiny U.FL socket. The kit doesn't include one. 150 mm, SMA female.</td><td class="n">$5.46</td></tr>
+      <tr class="sum"><td colspan="3">Total, Core Electronics</td><td class="n">$76.81</td></tr>
+    </tbody>
+  </table></div>
+  <p>Core's forum confirmed in January 2026 that this kit comes without the antenna cable ("this product does not come
+  with any pigtails included"). If yours turns out to have one, you've spent $5.46 on a spare.</p>
+</section>
+
+<section>
+  <h2>Putting the GPS in the right slot</h2>
+  <div class="note">
+    <strong>The RAK12500 goes in slot C.</strong>
+    <p>The RAK19003 has two module slots, C and D. RAKwireless rates the RAK12500 for slot A or C, and Meshtastic's
+    RAK19003 instructions use slot C. Slot D is the one people report problems with. In the wrong slot the GPS may
+    show up but never get a fix. Each slot is labelled on the board, and the module is held by one small screw.</p>
+  </div>
+</section>
+
+<section>
+  <h2>You'll also need</h2>
+  <ul>
+    <li><b>A 3.7 V single-cell LiPo battery</b> with a <b>JST PH 2.0 mm</b> plug. That's the battery socket on the
+    RAK19003, and no kit includes a battery. Mesh Buddy charges it over USB-C. Choose the size for how long you
+    ride: 1000-2000 mAh is a sensible start. Use a rechargeable Li-ion or LiPo only; RAK says the battery must never
+    exceed 4.3 V.</li>
+
+    <li><b>A weatherproof case</b> that lets the GPS see the sky. Mount the LoRa antenna upright.</li>
+    <li>A computer with Chrome or Edge to flash it from Kelly's LoRa Mesh &gt; Mesh Buddy tab. The guide walks you
+    through it.</li>
+  </ul>
+  <div class="note">
+    <strong>⚠️ Check the battery polarity before you plug it in.</strong>
+    <p>LiPo batteries are sold with their JST plugs wired both ways round. Compare the red and black wires with the
+    + and − marks beside the battery socket. A reversed battery can destroy the board. If they don't match, get a
+    battery that does.</p>
+  </div>
+  <div class="note">
+    <strong>No on/off switch.</strong>
+    <p>The RAK19003 has no power switch. To turn the tracker off, unplug the battery. If you want a switch, see the
+    upgrade below.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Should you add the motion sensor?</h2>
+  <div class="card">
+    <p><b>Not yet.</b> The usual WisBlock motion sensor is the RAK1904 (ST LIS3DH accelerometer). IoT Store has it for
+    $13.20; I couldn't find it at Core Electronics.</p>
+    <p>Mesh Buddy doesn't read a motion sensor today. It tells moving from parked by GPS speed, which already sets
+    the beacon rate (smart beaconing, at least 2 minutes apart while moving) and the telemetry rate (every 10 minutes
+    moving, every 30 parked). A motion sensor would only help once the firmware uses it to turn the GPS off while
+    you're parked, for longer battery life. When that happens, a RAK1904 fits the RAK19003's free slot D with one
+    screw, so nothing is lost by waiting.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Other ways to build it</h2>
+  <div class="wrap"><table>
+    <thead><tr><th>Build</th><th>Shop</th><th class="n">Total</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><b>The parts above</b></td><td>Core</td><td class="n">$76.81</td><td><span class="tag t-good">Recommended</span> Smallest board, no power switch.</td></tr>
+      <tr><td>Add a RAK19001 Dual IO base board (RW-110081)</td><td>Core</td><td class="n">$98.61</td><td>+$21.80 buys an on/off switch and 6 slots (GPS in slot A). The kit's RAK19003 is left over.</td></tr>
+      <tr><td>RW-115098 kit (RAK19007 + OLED) + RAK12500 + cable</td><td>Core</td><td class="n">$86.81</td><td>Bigger board (GPS in slot A), a screen Mesh Buddy doesn't need, no switch.</td></tr>
+      <tr><td>RAK19003 kit + RAK12500</td><td>IoT Store</td><td class="n">$92.40</td><td>IoT Store lists prices without GST; 10 % added here. Its RAK12500 is $49.50 against Core's $32.05.</td></tr>
+      <tr><td>RAK12501 GPS (Quectel L76K) instead of the RAK12500</td><td>Core</td><td class="n">$59.06</td><td><span class="tag t-warn">Untested</span> $17.75 cheaper, but a different chip nobody has tried with Mesh Buddy yet.</td></tr>
+      <tr><td>WisMesh Tag or SenseCAP T1000-E, ready-made</td><td>IoT Store / Core</td><td class="n">$91-109</td><td><span class="tag t-bad">Can't run Mesh Buddy</span> Meshtastic trackers; they won't send MeshPRS to aprs.fi.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer>
+  <p>Prices and stock from Core Electronics and IoT Store (iot-store.com.au) on 31 October 2026. The three
+  recommended parts were in stock. Prices change, so check before you order. Shipping isn't included.</p>
+  <p>Questions: ask Alec VK4AZ. Build steps: Kelly Page's Mesh Buddy guide (LoRa Mesh &gt; 🚲 Mesh Buddy).</p>
+  <p>RAKwireless, WisBlock, WisMesh, SenseCAP, DFRobot, Meshtastic and MeshCore names belong to their owners. This list
+  isn't sponsored by either shop.</p>
+</footer>
+
+</main>
+</body>
+</html>
