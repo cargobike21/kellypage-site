@@ -2,6 +2,15 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
+
+# The hosted Kelly app talks to radios, bridges, maps, APRS-IS, cameras and the gateway: no site CSP or permission
+# limits there (it needs Web Serial, the camera for QR codes and GPS).
+/app/*
+  ! Content-Security-Policy
+  ! Permissions-Policy
 
 /latest.json
   Cache-Control: no-cache
