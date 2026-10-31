@@ -2,7 +2,7 @@
 
 The website for **Kelly Page**, free software for hams: downloads, the Raspberry Pi image, Mesh Buddy, guides and tips.
 
-Plain static HTML and CSS, no build step. Hosted on Cloudflare Pages; the big downloads (release zips, the Pi image)
+Plain static HTML and CSS, no build step. Published to Cloudflare Pages with `python publish.py` (credentials from a local .env, never in this repo); the big downloads (release zips, the Pi image)
 live on Cloudflare R2 at `downloads.kellypage.app`, and `latest.json` says which release is current.
 
 - `index.html`, `download.html`, `raspberry-pi.html`, `mesh-buddy.html`, `guides.html`, `tips.html`, `about.html`
