@@ -1,12 +1,12 @@
 {
-  "version": "0.4.37",
+  "version": "0.4.38",
   "date": "31 October 2026",
   "expires": "30 April 2027",
   "size": "2.8 MB",
-  "sha256": "75453bfbd019bd3efe46ea3e7bcfdd9afabc1b3eb9a998907db9cf7f870ff101",
+  "sha256": "9b04f40b30f2a0206e4ee9943313f932e919420ff2b4d978afb4a274125a8641",
   "files": {
-    "zip": "https://downloads.kellypage.app/KellyPage-0.4.37-2026-10-31-expires-2027-04-30.zip",
-    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.37.html"
+    "zip": "https://downloads.kellypage.app/KellyPage-0.4.38-2026-10-31-expires-2027-04-30.zip",
+    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.38.html"
   },
   "pi": {
     "version": "0.4.37",
