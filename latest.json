@@ -1,18 +1,18 @@
 {
-  "version": "0.4.36",
+  "version": "0.4.37",
   "date": "31 October 2026",
-  "expires": "28 November 2026",
-  "size": "2.4 MB",
-  "sha256": "19b84eada9ab4c63e57e1ef36f11d3589a65b80032c9b84a25dd704e273d60a7",
+  "expires": "30 April 2027",
+  "size": "2.8 MB",
+  "sha256": "75453bfbd019bd3efe46ea3e7bcfdd9afabc1b3eb9a998907db9cf7f870ff101",
   "files": {
-    "zip": "https://downloads.kellypage.app/KellyPage-0.4.36-2026-10-31-expires-2026-11-28.zip",
-    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.36.html"
+    "zip": "https://downloads.kellypage.app/KellyPage-0.4.37-2026-10-31-expires-2027-04-30.zip",
+    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.37.html"
   },
   "pi": {
-    "version": "0.4.36",
-    "size": "279 MB",
-    "sha256": "18c83364be151f75fb548e8c3d81f6afbb058b587a7a109ec84343202a94b95b",
-    "image": "https://downloads.kellypage.app/kellypage-0.4.36-arm64-lite.img.xz",
+    "version": "0.4.37",
+    "size": "280 MB",
+    "sha256": "2b723930cdb3ce28a9f4ea5b21d49737468f87f8d6189fbdf49ceb7fdf338ebe",
+    "image": "https://downloads.kellypage.app/kellypage-0.4.37-arm64-lite.img.xz",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
   }
 }
