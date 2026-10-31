@@ -120,11 +120,10 @@ def main():
     missing = set(must(call("POST", f"{API}/pages/assets/check-missing", jwt, {"hashes": hashes}), "check-missing"))
     todo = [v for v in {v[0]: v for v in files.values()}.values() if v[0] in missing]
     batch, size = [], 0
-    for h, b64, ct in todo + [None]:
-        if h is not None:
-            batch.append({"key": h, "value": b64, "metadata": {"contentType": ct}, "base64": True})
-            size += len(b64)
-        if batch and (h is None or size > 40 * 1024 * 1024 or len(batch) >= 1000):
+    for i, (h, b64, ct) in enumerate(todo):
+        batch.append({"key": h, "value": b64, "metadata": {"contentType": ct}, "base64": True})
+        size += len(b64)
+        if i == len(todo) - 1 or size > 40 * 1024 * 1024 or len(batch) >= 1000:
             must(call("POST", f"{API}/pages/assets/upload", jwt, batch), "upload")
             batch, size = [], 0
     must(call("POST", f"{API}/pages/assets/upsert-hashes", jwt, {"hashes": hashes}), "upsert-hashes")
