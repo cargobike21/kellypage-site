@@ -3,16 +3,16 @@
   "date": "31 October 2026",
   "expires": "30 April 2027",
   "size": "2.8 MB",
-  "sha256": "9b04f40b30f2a0206e4ee9943313f932e919420ff2b4d978afb4a274125a8641",
+  "sha256": "43f466d4902f260155c17f98932b46c94d4b59577ebc9086cf88820ccabe8973",
   "files": {
-    "zip": "https://downloads.kellypage.app/KellyPage-0.4.38-2026-10-31-expires-2027-04-30.zip",
-    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.38.html"
+    "zip": "https://downloads.kellypage.app/KellyPage-0.4.38-2026-10-31-expires-2027-04-30.zip?v=43f466d4",
+    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.38.html?v=542ddb3b"
   },
   "pi": {
-    "version": "0.4.38",
-    "size": "280 MB",
-    "sha256": "594ad5a5ef54a91eb7b5fe1b49d701f762a43fcd8dbc1d8240f2cd3f70bf69b3",
-    "image": "https://downloads.kellypage.app/kellypage-0.4.38-arm64-lite.img.xz",
+    "version": "being rebuilt",
+    "size": "-",
+    "sha256": "-",
+    "note": "A new Pi image is on its way with the next Kelly release. Until then, install Kelly on Raspberry Pi OS with the install-pi steps in the download, or come back soon.",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
   }
 }

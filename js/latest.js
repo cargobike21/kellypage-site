@@ -11,6 +11,7 @@
     document.querySelectorAll('[data-latest-href]').forEach((el) => {
       const v = get(L, el.getAttribute('data-latest-href'));
       if (v) el.href = v;
+      else el.hidden = true;          // nothing to download right now (e.g. pi.image while a new one is built)
     });
   };
   fetch('latest.json', { cache: 'no-cache' }).then((r) => r.json()).then(set).catch(() => {
