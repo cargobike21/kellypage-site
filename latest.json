@@ -9,10 +9,10 @@
     "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.39.html?v=a72c05a1"
   },
   "pi": {
-    "version": "being rebuilt",
-    "size": "-",
-    "sha256": "-",
-    "note": "A new Pi image is on its way with the next Kelly release. Until then, install Kelly on Raspberry Pi OS with the install-pi steps in the download, or come back soon.",
+    "version": "0.4.39",
+    "size": "280 MB",
+    "sha256": "b264384114df20ad68f2415ebecb3cfb21ad0055b5950764856d761328fcc900",
+    "image": "https://downloads.kellypage.app/kellypage-0.4.39-arm64-lite.img.xz",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
   }
 }
