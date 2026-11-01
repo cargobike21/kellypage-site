@@ -1,18 +1,18 @@
 {
   "version": "0.4.39",
   "date": "1 November 2026",
-  "expires": "30 April 2027",
-  "size": "2.8 MB",
-  "sha256": "a72c05a1dcc99980f60e67a2eec3c20ae47549f4cf45aeb7d2b5d35392ebe301",
+  "size": "2.7 MB",
+  "sha256": "789d37286c6f6fa7153b71cea92403b08622e919298857d8c933d5f28291f3a5",
   "files": {
-    "zip": "https://downloads.kellypage.app/KellyPage-0.4.39-2026-11-01-expires-2027-04-30.zip?v=a72c05a1",
-    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.39.html?v=a72c05a1"
+    "zip": "https://downloads.kellypage.app/KellyPage-0.4.39-2026-11-01-public.zip",
+    "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.39-public.html"
   },
   "pi": {
     "version": "0.4.39",
-    "size": "280 MB",
-    "sha256": "b264384114df20ad68f2415ebecb3cfb21ad0055b5950764856d761328fcc900",
-    "image": "https://downloads.kellypage.app/kellypage-0.4.39-arm64-lite.img.xz",
+    "size": "281 MB",
+    "sha256": "23684af9f339248a160d89b930fcd0ab0e71ede72232062792dd3073e2a68f07",
+    "image": "https://downloads.kellypage.app/kellypage-0.4.39-arm64-lite.img.xz?v=23684af9",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
-  }
+  },
+  "build": "public build, no end date"
 }

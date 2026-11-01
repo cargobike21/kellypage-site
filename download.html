@@ -24,7 +24,7 @@
 
   <div class="dl">
     <div class="ver">Kelly Page <span data-latest="version">…</span></div>
-    <div class="meta">Released <span data-latest="date">…</span> · works until <b data-latest="expires">…</b> · <span data-latest="size">…</span></div>
+    <div class="meta">Released <span data-latest="date">…</span> · <b data-latest="build">…</b> · <span data-latest="size">…</span></div>
     <div class="btns">
       <a class="btn primary" data-latest-href="files.zip" href="#">⬇️ Download the zip</a>
       <a class="btn" data-latest-href="files.manual" href="#">📖 The manual</a>
@@ -32,9 +32,10 @@
     <div class="sha">SHA-256: <span data-latest="sha256">…</span></div>
   </div>
 
-  <div class="note warn"><b>📅 Why "works until"?</b> Each release has a stop date, about six months out. It keeps
-  everyone on a recent version: the radio protocols and the P25X gateway move on, and an old copy can confuse them.
-  Grab the new one before the date. Your settings carry over (Admin › Save config, then Load config).</div>
+  <div class="note"><b>📻 On the P25X network?</b> Everything for your own radio, LoRa mesh (MeshCore, Meshtastic),
+  the APRS iGate and Bluetooth works straight away. The P25X gateway's services (weather, files, the PBBS, SSTV,
+  updates over the air and the rest) need the station <b>registered</b>: in Kelly, <b>Admin › Register this
+  station</b>, with your callsign and radio ID. Once it's approved, Kelly collects its registration by itself.</div>
 
   <h2>On a PC</h2>
   <ol class="steps">
@@ -55,7 +56,9 @@
     <li>Open Kelly and press <b>Ctrl+F5</b> once.</li>
     <li>Anything missing? <b>Admin › Load config</b>.</li>
   </ol>
-  <p>On the P25X network, Kelly can also fetch new releases itself over P25 data, overnight.</p>
+  <p>Or let Kelly do it: <b>Admin › Kelly updates › Get it from kellypage.app</b> downloads the new version,
+  checks it and installs it into your Kelly folder. Registered P25X stations can also get updates over P25 data,
+  overnight.</p>
 
   <h2>Checking the download</h2>
   <p>The SHA-256 above should match the file you downloaded. In PowerShell:</p>
