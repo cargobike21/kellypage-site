@@ -12,4 +12,4 @@ live on Cloudflare R2 at `downloads.kellypage.app`, and `latest.json` says which
 
 Preview locally: `python -m http.server 8080` in this folder, then http://localhost:8080/.
 
-MIT licence. Alec Swinton VK4AZ.
+MIT licence.
