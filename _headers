@@ -6,11 +6,13 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; object-src 'none'
 
-# The hosted Kelly app talks to radios, bridges, maps, APRS-IS, cameras and the gateway: no site CSP or permission
-# limits there (it needs Web Serial, the camera for QR codes and GPS).
+# The hosted Kelly app talks to radios, bridges, maps, APRS-IS, cameras and the gateway: no permission limits there (it
+# needs Web Serial, the camera for QR codes and GPS) and its own CSP -- scripts only from this site (+ Turnstile), wide
+# connect/img for bridges, map tiles and kellypage.app. Keep it = P25X kelly-page/tests/csp-cdp.js, which tests it.
 /app/*
   ! Content-Security-Policy
   ! Permissions-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; worker-src 'self' blob:; frame-src https://challenges.cloudflare.com; connect-src 'self' https: wss: ws://localhost:* ws://127.0.0.1:* http://localhost:* http://127.0.0.1:*; img-src 'self' data: blob: https:; media-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'
 
 /latest.json
   Cache-Control: no-cache
