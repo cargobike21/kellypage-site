@@ -31,7 +31,7 @@ HERE = Path(__file__).resolve().parent
 PROJECT = "kellypage"
 API = "https://api.cloudflare.com/client/v4"
 SITE = ["index.html", "download.html", "raspberry-pi.html", "mesh-buddy.html", "guides.html", "tips.html", "about.html",
-        "404.html", "latest.json", "robots.txt", "sitemap.xml", "_headers", "css", "js", "assets", "guides"]
+        "404.html", "latest.json", "robots.txt", "sitemap.xml", "_headers", ".well-known", "css", "js", "assets", "guides"]
 mimetypes.add_type("application/manifest+json", ".webmanifest")
 mimetypes.add_type("text/javascript", ".js")
 

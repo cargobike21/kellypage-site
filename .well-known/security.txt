@@ -1,0 +1,4 @@
+Contact: mailto:security@kellypage.app
+Expires: 2027-10-31T14:00:00.000Z
+Preferred-Languages: en
+Canonical: https://kellypage.app/.well-known/security.txt
