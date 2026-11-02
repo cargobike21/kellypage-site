@@ -8,10 +8,10 @@
     "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.41-public.html"
   },
   "pi": {
-    "version": "0.4.39",
-    "size": "281 MB",
-    "sha256": "23684af9f339248a160d89b930fcd0ab0e71ede72232062792dd3073e2a68f07",
-    "image": "https://downloads.kellypage.app/kellypage-0.4.39-arm64-lite.img.xz?v=23684af9",
+    "version": "0.4.41",
+    "size": "279 MB",
+    "sha256": "a66a24ab21cb0a987e062cc655d457399162fcb77f90b435b271ab9fd05a78df",
+    "image": "https://downloads.kellypage.app/kellypage-0.4.41-arm64-lite.img.xz?v=a66a24ab",
     "imager": "https://downloads.kellypage.app/kellypage-os-list.json"
   },
   "build": "public build, no end date"
