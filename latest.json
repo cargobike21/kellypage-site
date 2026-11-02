@@ -2,9 +2,9 @@
   "version": "0.4.41",
   "date": "2 November 2026",
   "size": "2.8 MB",
-  "sha256": "a0c3fb05492fe312c999959047ba9f3a8d2bf4b6a8ffc4f73b31c9f9417711f0",
+  "sha256": "1b260f9049fa7fce2dfb8325f3b2213140dd743c84265eef3fa735d2e8db8dc4",
   "files": {
-    "zip": "https://downloads.kellypage.app/KellyPage-0.4.41-2026-11-02-public.zip",
+    "zip": "https://downloads.kellypage.app/KellyPage-0.4.41-2026-11-02-public.zip?v=1b260f90",
     "manual": "https://downloads.kellypage.app/Kelly-Page-Manual-0.4.41-public.html"
   },
   "pi": {
